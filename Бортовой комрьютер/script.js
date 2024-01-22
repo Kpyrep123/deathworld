@@ -31,3 +31,26 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+document.getElementById("myButton").addEventListener("click", function() {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
+    document.documentElement.msRequestFullscreen();
+  }
+});
+
+// Load the DNS module
+const dns = require('dns');
+
+// Use dns.resolve() function to resolve the DNS records
+dns.resolve('yourwebsite.com', 'A', (err, records) => {
+    if(err) {
+        console.log(err);
+    } else {
+        console.log(records);
+    }
+});

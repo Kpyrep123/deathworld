@@ -54,7 +54,7 @@ body, html {
 
 .screen {
     overflow-y: hidden;
-    border: 3px solid #2b4a1e;
+    border: 1px solid #0f0; /* Граница, подобная стилю основного окна */
     border-radius: 15px;
     position: absolute;
     top: 23%;
@@ -106,3 +106,28 @@ body, html {
     height: 100%;
 }
 
+#myButton {
+    font-size: 20px;
+    padding: 10px 24px;
+    cursor: pointer;
+    position: fixed;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: 1px solid #0f0; /* Граница, подобная стилю основного окна */
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    top: 21%;
+    right: 10%;
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 50px; /* Высота строки равна высоте заголовочного окна для вертикального центрирования */
+    z-index: 5;         /* Z-индекс должен быть меньше, чем у кнопок прокрутки */
+    font: 1.2rem "Comic Sans MS", sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+  }
+
+  #myButton:hover {
+    background-color: #45a049;
+  }
