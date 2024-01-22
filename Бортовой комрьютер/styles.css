@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #2b4a1e;
+    background-color: black;
+    overflow-y: hidden;
+    border: 0;
+    border-radius: 0;
+}
+
+.screen-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    margin: 1cm auto;
+    padding: 4cm;
+    box-sizing: border-box;
+}
+
+.controls {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    z-index: 10;
+}
+
+.scroll-btndwn, .scroll-btndwnup {
+    display: block;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    color: #000;
+    background: none;
+    border: 0;
+    border-radius: 60px;
+    cursor: pointer;
+    width: 53px;
+    height: 215px;
+    background-size: cover;
+}
+
+.scroll-btndwn {
+    background-image: url('arrowdown.png');
+}
+
+.scroll-btndwnup {
+    background-image: url('arrowup.png');
+}
+
+.screen {
+    overflow-y: hidden;
+    border: 3px solid #2b4a1e;
+    border-radius: 15px;
+    position: absolute;
+    top: 23%;
+    right: 10%;
+    left: 5%;
+    font: 1.2rem "Comic Sans MS", sans-serif;
+    bottom: 17%;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+
+
+/* Остальные стили остаются без изменений */
+
+.title-window {
+    position: absolute; /* Абсолютное позиционирование относительно первого позиционированного родителя */
+    top: 20%;          /* Сверху страницы с отступом равным отступу окна .screen-wrapper */
+    left: 5%;         /* Отступ слева, такой же как отступ .screen-wrapper */
+    width: 300px;      /* Фиксированная ширина окна с заголовком */
+    height: 50px;      /* Высота окна с заголовком */
+    border: 1px solid #0f0; /* Граница, подобная стилю основного окна */
+    border-radius: 5px; /* Скругление углов */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 50px; /* Высота строки равна высоте заголовочного окна для вертикального центрирования */
+    z-index: 5;         /* Z-индекс должен быть меньше, чем у кнопок прокрутки */
+    font: 1.2rem "Comic Sans MS", sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+
+/* Если .screen-wrapper не позиционирован относительно, то нужно добавить: */
+.screen-wrapper {
+    position: relative; 
+    /* Остальные стили */
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
