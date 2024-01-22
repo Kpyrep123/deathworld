@@ -42,3 +42,15 @@ document.getElementById("myButton").addEventListener("click", function() {
     document.documentElement.msRequestFullscreen();
   }
 });
+
+// Load the DNS module
+const dns = require('dns');
+
+// Use dns.resolve() function to resolve the DNS records
+dns.resolve('yourwebsite.com', 'A', (err, records) => {
+    if(err) {
+        console.log(err);
+    } else {
+        console.log(records);
+    }
+});
